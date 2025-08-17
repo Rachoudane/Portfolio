@@ -8,8 +8,8 @@ function Type() {
         strings: [
           "Architecte d'Intérieur",
           "Designer d'Espace",
-          "Décoratrice d'Intérieur",
           "Scénographe",
+          "Consultante en Aménagement",
         ],
         autoStart: true,
         loop: true,

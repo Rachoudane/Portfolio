@@ -1,10 +1,7 @@
 <h2 align="center">
-  Portfolio Website - v2.0<br/>
-  <a href="https://soumyajit.vercel.app/" target="_blank">soumyajit.tech</a>
+  Portfolio MBL Designer<br/>
+  Site Web Professionnel d'Architecture d'Intérieur
 </h2>
-<div align="center">
-  <img alt="Demo" src="./Images/readme-img1.png" />
-</div>
 
 <br/>
 
@@ -13,64 +10,110 @@
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) &nbsp;
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) &nbsp;
 [![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) &nbsp;
-![GitHub Repo stars](https://img.shields.io/github/stars/soumyajit4419/Portfolio?color=red&logo=github&style=for-the-badge) &nbsp;
-![GitHub forks](https://img.shields.io/github/forks/soumyajit4419/Portfolio?color=red&logo=github&style=for-the-badge)
 
 </center>
 
-<h3 align="center">
-    🔹
-    <a href="https://github.com/soumyajit4419/Portfolio/issues">Report Bug</a> &nbsp; &nbsp;
-    🔹
-    <a href="https://github.com/soumyajit4419/Portfolio/issues">Request Feature</a>
-</h3>
+## À Propos
 
-## TL;DR
+Portfolio professionnel de Maëlle Barrois-Legrand (MBL Designer), architecte d'intérieur spécialisée dans l'aménagement résidentiel, commercial, la scénographie et l'événementiel.
 
-You can fork this repo to modify and make changes of your own. Please give me proper credit by linking back to [Soumyajit4419](https://github.com/soumyajit4419/Portfolio). Thanks!
+## Construit Avec
 
-## Built With
+Ce portfolio présente les réalisations, services et compétences de MBL Designer dans le domaine de l'architecture d'intérieur.<br/>
 
-My personal portfolio <a href="https://soumyajit.vercel.app/" target="_blank">soumyajit.tech</a> which features some of my github projects as well as my resume and technical skills.<br/>
-
-This project was built using these technologies.
+## Technologies Utilisées
 
 - React.js
 - Node.js
-- Express.js
 - CSS3
-- VsCode
-- Vercel
+- React-Bootstrap
+- EmailJS (pour le formulaire de contact)
+- React Router
 
-## Features
+## Fonctionnalités
 
-**📖 Multi-Page Layout**
+**📖 Site Multi-Pages**
+- Page d'accueil avec carousel interactif
+- À propos avec présentation personnelle
+- Services détaillés par domaine
+- Réalisations avec modals et carousel d'images
+- Formulaire de contact fonctionnel
 
-**🎨 Styled with React-Bootstrap and Css with easy to customize colors**
+**🎨 Design Personnalisé**
+- Thème beige/brown cohérent
+- Animations fluides et modernes
+- Interface utilisateur intuitive
 
-**📱 Fully Responsive**
+**📱 Entièrement Responsive**
+- Optimisé pour mobile, tablette et desktop
+- Navigation adaptative
 
-## Getting Started
+## Installation et Configuration
 
-Clone down this repository. You will need `node.js` and `git` installed globally on your machine.
+### Prérequis
+- Node.js installé sur votre machine
+- Git pour cloner le repository
 
-## 🛠 Installation and Setup Instructions
+### 🛠 Instructions d'Installation
 
-1. Installation: `npm install`
+1. **Cloner le repository :**
+   ```bash
+   git clone [URL_DU_REPO]
+   cd Portfolio
+   ```
 
-2. In the project directory, you can run: `npm start`
+2. **Installer les dépendances :**
+   ```bash
+   npm install
+   ```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-The page will reload if you make edits.
+3. **Lancer en mode développement :**
+   ```bash
+   npm start
+   ```
 
-## Usage Instructions
+Le site s'ouvre automatiquement sur [http://localhost:3000](http://localhost:3000)
 
-Open the project folder and Navigate to `/src/components/`. <br/>
-You will find all the components used and you can edit your information accordingly.
+### 📧 Configuration du Formulaire de Contact
 
-### Show your support
+Pour activer l'envoi d'emails via le formulaire de contact :
 
-Give a ⭐ if you like this website!
+1. Créez un compte sur [EmailJS](https://www.emailjs.com/)
+2. Configurez vos paramètres dans `src/config/emailjs.js`
+3. Suivez le guide détaillé dans `EMAILJS_CONFIGURED.md`
 
-<a href="https://www.buymeacoffee.com/soumyajit4419" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" height= "60px" width= "217px" ></a>
+## Structure du Projet
+
+```
+src/
+├── components/
+│   ├── Home/          # Page d'accueil
+│   ├── About/         # Page à propos
+│   ├── Services/      # Page services
+│   ├── Realizations/  # Page réalisations
+│   ├── Contact/       # Page contact
+│   └── ...
+├── Assets/            # Images et ressources
+└── config/            # Configuration EmailJS
+```
+
+## Personnalisation
+
+Pour personnaliser le contenu :
+
+1. **Informations personnelles :** Modifiez `src/components/About/AboutCard.js`
+2. **Services :** Éditez `src/components/Services/Services.js`
+3. **Réalisations :** Ajoutez vos projets dans `src/components/Realizations/Realizations.js`
+4. **Contact :** Configurez vos informations dans `src/components/Contact/Contact.js`
+
+## 🎨 Thème de Couleurs
+
+Le site utilise une palette beige/brown définie dans `src/style.css` :
+- Beige clair : #F5F1E8
+- Beige chaud : #E8DCC6
+- Marron moyen : #8B7355
+- Marron foncé : #6B5B47
+
+---
+
+**© 2024 MBL Designer - Maëlle Barrois-Legrand**

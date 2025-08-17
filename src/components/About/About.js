@@ -1,10 +1,10 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
-import Github from "./Github";
+
 import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
-import laptopImg from "../../Assets/about.png";
+import profileImg from "../../Assets/IMG_6026.jpg";
 import Toolstack from "./Toolstack";
 
 function About() {
@@ -12,6 +12,7 @@ function About() {
     <Container fluid className="about-section">
       <Particle />
       <Container>
+        {/* Introduction Section */}
         <Row style={{ justifyContent: "center", padding: "10px" }}>
           <Col
             md={7}
@@ -21,8 +22,8 @@ function About() {
               paddingBottom: "50px",
             }}
           >
-            <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-              Know Who <strong className="purple">I'M</strong>
+            <h1 style={{ fontSize: "2.1em", paddingBottom: "20px", textAlign: "center" }}>
+              À propos de <strong className="purple">MBL Designer</strong>
             </h1>
             <Aboutcard />
           </Col>
@@ -31,21 +32,29 @@ function About() {
             style={{ paddingTop: "120px", paddingBottom: "50px" }}
             className="about-img"
           >
-            <img src={laptopImg} alt="about" className="img-fluid" />
+            <img src={profileImg} alt="MBL Designer" className="img-fluid" style={{ borderRadius: "15px", boxShadow: "0 8px 20px rgba(139, 115, 85, 0.3)" }} />
           </Col>
         </Row>
-        <h1 className="project-heading">
-          Professional <strong className="purple">Skillset </strong>
-        </h1>
 
-        <Techstack />
+        {/* Professional Skills Section */}
+        <Row style={{ justifyContent: "center", paddingTop: "50px" }}>
+          <Col md={12}>
+            <h1 className="project-heading" style={{ textAlign: "center", marginBottom: "30px" }}>
+              Mes <strong className="purple">Compétences</strong>
+            </h1>
+            <Techstack />
+          </Col>
+        </Row>
 
-        <h1 className="project-heading">
-          <strong className="purple">Tools</strong> I use
-        </h1>
-        <Toolstack />
-
-        <Github />
+        {/* Tools & Equipment Section */}
+        <Row style={{ justifyContent: "center", paddingTop: "70px" }}>
+          <Col md={12}>
+            <h1 className="project-heading" style={{ textAlign: "center", marginBottom: "30px" }}>
+              <strong className="purple">Outils</strong> & Équipements
+            </h1>
+            <Toolstack />
+          </Col>
+        </Row>
       </Container>
     </Container>
   );

@@ -1,17 +1,30 @@
 html {
+  /* New Beige/Brown Color Palette */
+  --light-beige: #F5F1E8;
+  --warm-beige: #E8DCC6;
+  --medium-beige: #D4C4A8;
+  --light-brown: #B8A082;
+  --medium-brown: #8B7355;
+  --dark-brown: #6B5B47;
+  --deep-brown: #4A3F35;
+  --primary-text: #2C2419;
+  --secondary-text: #4A3F35;
+  --light-text: #FFFFFF;
+
+  /* Updated gradients with new color scheme */
   --section-background-color: linear-gradient(
     to bottom left,
-    rgba(17, 16, 16, 0.582),
-    rgba(12, 8, 24, 0.904)
+    rgba(245, 241, 232, 0.95),
+    rgba(232, 220, 198, 0.98)
   );
 
   --image-gradient: linear-gradient(
     to bottom left,
-    rgba(17, 16, 16, 0.678),
-    rgba(12, 10, 22, 0.863)
+    rgba(212, 196, 168, 0.85),
+    rgba(184, 160, 130, 0.90)
   );
 
-  --imp-text-color: #c770f0;
+  --imp-text-color: var(--medium-brown);
 }
 
 .purple {
@@ -32,7 +45,7 @@ button:focus {
   width: 100%;
   height: 100%;
   z-index: 999999;
-  background-color: #0c0513;
+  background-color: var(--deep-brown);
   background-image: url(./Assets/pre.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -57,18 +70,18 @@ button:focus {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #2d1950;
+  background: var(--warm-beige);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(178, 121, 216, 0.959);
+  background: var(--medium-brown);
   border-radius: 12px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(222, 130, 235, 0.911);
+  background: var(--dark-brown);
   border-radius: 12px;
 }
 
@@ -76,10 +89,19 @@ button:focus {
 /* Navbar Section  */
 /* --------- */
 .sticky {
-  background-color: #1b1a2ea9 !important;
+  background-color: rgba(74, 63, 53, 0.95) !important;
   transition: all 0.3s ease-out 0s !important;
-  box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
+  box-shadow: 0px 10px 10px 0px rgba(44, 36, 25, 0.2) !important;
   backdrop-filter: blur(15px) !important;
+}
+
+/* White text on dark sticky navbar */
+.sticky .navbar-nav .nav-link {
+  color: var(--light-text) !important;
+}
+
+.sticky .navbar-brand {
+  color: var(--light-text) !important;
 }
 
 .navbar {
@@ -97,7 +119,7 @@ button:focus {
 
 .navbar-toggler span {
   display: block !important;
-  background-color: #be50f4 !important;
+  background-color: var(--medium-brown) !important;
   height: 4px !important;
   width: 27px !important;
   margin-top: 5px !important;
@@ -144,23 +166,39 @@ button:focus {
   .navbar {
     padding: 1rem 2rem !important;
     font-size: 1.4rem !important;
-    background-color: #181a27 !important;
+    background-color: var(--deep-brown) !important;
   }
   .navbar-nav .nav-item a::after {
     display: none !important;
   }
+  /* White text on dark mobile navbar */
+  .navbar-nav .nav-link {
+    color: var(--light-text) !important;
+  }
+  .navbar-brand {
+    color: var(--light-text) !important;
+  }
 }
 .navbar-brand {
-  color: rgb(250, 250, 250) !important;
+  color: var(--primary-text) !important;
 }
 
 .logo {
-  height: 1.4em !important;
-  width: 2.5em !important;
+  height: 4.5em !important;
+  width: auto !important;
+  max-width: 250px !important;
+  object-fit: contain !important;
+}
+
+@media (max-width: 767px) {
+  .logo {
+    height: 3.5em !important;
+    max-width: 200px !important;
+  }
 }
 
 .navbar-nav .nav-link {
-  color: white !important;
+  color: var(--primary-text) !important;
   padding-right: 1rem !important;
   padding-left: 1rem !important;
 }
@@ -194,7 +232,7 @@ button:focus {
   height: 5px;
   width: 0;
   border-radius: 16px;
-  background: #c95bf5;
+  background: var(--medium-brown);
   bottom: 1px;
   left: 0;
   z-index: -1;
@@ -248,6 +286,8 @@ button:focus {
   background-size: cover !important;
   width: 100%;
   height: 100%;
+  z-index: -1 !important;
+  pointer-events: none !important;
 }
 
 .home-header {
@@ -257,7 +297,7 @@ button:focus {
 .home-section {
   position: relative;
   z-index: -1;
-  background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
+  background-image: var(--image-gradient);
   background-position: top center;
   background-repeat: no-repeat;
   padding-bottom: 30px !important;
@@ -266,7 +306,7 @@ button:focus {
 
 .home-content {
   padding: 9rem 0 2rem !important;
-  color: whitesmoke;
+  color: var(--primary-text);
   text-align: left;
 }
 
@@ -281,17 +321,17 @@ button:focus {
 }
 
 .main-name {
-  color: #cd5ff8;
+  color: var(--medium-brown);
 }
 
 .Typewriter__wrapper {
   font-size: 2.2em !important;
-  color: #be6adf !important;
+  color: var(--dark-brown) !important;
   font-weight: 600 !important;
 }
 .Typewriter__cursor {
   font-size: 2.4em !important;
-  color: #b562d6 !important;
+  color: var(--medium-brown) !important;
 }
 
 @media (max-width: 767px) {
@@ -324,7 +364,7 @@ button:focus {
 }
 
 .home-about-description {
-  color: white !important;
+  color: var(--primary-text) !important;
   padding-top: 100px !important;
   padding-bottom: 20px !important;
   text-align: center;
@@ -339,7 +379,7 @@ button:focus {
 .home-about-social {
   text-align: center !important;
   padding-top: 25px;
-  color: white !important;
+  color: var(--primary-text) !important;
 }
 
 .home-about-social-links {
@@ -358,7 +398,7 @@ button:focus {
   text-align: center !important;
   font-size: 1.2em !important;
   line-height: 2em !important;
-  background: rgba(255, 255, 255, 0.972) !important;
+  background: rgba(245, 241, 232, 0.95) !important;
   border-radius: 50% !important;
   transition: 0.5s !important;
 }
@@ -371,7 +411,7 @@ button:focus {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: #68187a;
+  background: var(--medium-brown);
   transition: 0.5s;
   transform: scale(0.9);
   z-index: -1;
@@ -379,13 +419,13 @@ button:focus {
 
 .home-social-icons:hover::before {
   transform: scale(1.1);
-  box-shadow: 0 0 15px #801f95;
+  box-shadow: 0 0 15px var(--light-brown);
 }
 
 .home-social-icons:hover {
-  color: #87209e;
-  box-shadow: 0 0 5px #87209e;
-  text-shadow: 0 0 2px #87209e;
+  color: var(--light-brown);
+  box-shadow: 0 0 5px var(--light-brown);
+  text-shadow: 0 0 2px var(--light-brown);
 }
 
 .social-icons {
@@ -395,14 +435,14 @@ button:focus {
 }
 
 .icon-colour {
-  color: #700c86 !important;
+  color: var(--medium-brown) !important;
 }
 
 /* --------- */
 /* Footer */
 /* --------- */
 .footer {
-  background-color: rgb(10, 4, 22);
+  background-color: var(--deep-brown);
   bottom: 0 !important;
   padding-top: 10px !important;
   padding-bottom: 8px !important ;
@@ -428,7 +468,7 @@ button:focus {
 
 .footer h3 {
   font-size: 1em;
-  color: white !important;
+  color: var(--light-text) !important;
   margin-top: 0.5em !important;
   margin-bottom: 0.5em !important;
 }
@@ -439,7 +479,7 @@ button:focus {
 }
 
 .blockquote-footer {
-  color: #a588c0 !important;
+  color: #c4a882 !important;
 }
 /* --------- */
 /* Projects */
@@ -460,17 +500,19 @@ button:focus {
 }
 
 .project-card-view {
-  box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
-  color: white !important;
-  background-color: transparent !important;
-  opacity: 0.9 !important;
+  box-shadow: 0 4px 5px 3px rgba(139, 115, 85, 0.3) !important;
+  color: var(--primary-text) !important;
+  background-color: rgba(245, 241, 232, 0.95) !important;
+  opacity: 0.95 !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
+  border: 1px solid var(--warm-beige) !important;
 }
 .project-card-view:hover {
   transform: scale(1.02) !important;
   overflow: hidden !important;
-  box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
+  box-shadow: 0 6px 8px 5px rgba(139, 115, 85, 0.4) !important;
+  background-color: var(--light-beige) !important;
 }
 
 .blog-card {
@@ -482,15 +524,16 @@ button:focus {
 }
 
 .blog-card-view {
-  background-color: transparent !important;
-  box-shadow: 0 3px 3px 2px rgba(145, 77, 161, 0.459) !important;
-  color: white !important;
+  background-color: rgba(245, 241, 232, 0.95) !important;
+  box-shadow: 0 3px 3px 2px rgba(139, 115, 85, 0.3) !important;
+  color: var(--primary-text) !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
+  border: 1px solid var(--warm-beige) !important;
 }
 
 .blog-link {
-  color: white !important;
+  color: var(--primary-text) !important;
   text-decoration: none !important;
 }
 
@@ -501,7 +544,8 @@ button:focus {
 .blog-card-view:hover {
   transform: scale(1.02) !important;
   overflow: hidden !important;
-  box-shadow: 0 3px 3px 5px rgba(155, 88, 173, 0.65) !important;
+  box-shadow: 0 6px 8px 5px rgba(139, 115, 85, 0.4) !important;
+  background-color: var(--light-beige) !important;
 }
 
 .card-img-top {
@@ -517,22 +561,22 @@ button:focus {
 }
 
 .btn-primary {
-  color: #fff !important;
-  background-color: #623686 !important;
-  border-color: #623686 !important;
+  color: var(--light-text) !important;
+  background-color: var(--medium-brown) !important;
+  border-color: var(--medium-brown) !important;
 }
 
 .btn-primary:hover {
-  color: #fff !important;
-  background-color: #6d20c5d7 !important;
-  border-color: #6d20c5d7 !important;
+  color: var(--light-text) !important;
+  background-color: var(--dark-brown) !important;
+  border-color: var(--dark-brown) !important;
 }
 .btn:focus {
   outline: none !important;
   box-shadow: none !important;
 }
 .project-heading {
-  color: white !important;
+  color: var(--primary-text) !important;
   font-size: 2.3em !important;
   font-weight: 500 !important;
   padding-top: 10px !important;
@@ -547,22 +591,23 @@ button:focus {
   padding-top: 150px !important;
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
-  color: white !important;
+  color: var(--primary-text) !important;
 }
 
 .tech-icons {
   font-size: 4.5em !important;
   margin: 15px !important;
   padding: 10px !important;
-  opacity: 0.93 !important;
-  border: 1.7px solid rgba(200, 137, 230, 0.637) !important;
+  opacity: 0.95 !important;
+  border: 1.7px solid var(--light-brown) !important;
   vertical-align: middle !important;
   text-align: center !important;
   border-radius: 5px !important;
   display: table !important;
-  box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
+  box-shadow: 4px 5px 4px 3px rgba(139, 115, 85, 0.2) !important;
   overflow: hidden !important;
   transition: all 0.4s ease 0s !important;
+  background-color: rgba(245, 241, 232, 0.8) !important;
 }
 
 @media (max-width: 767px) {
@@ -574,7 +619,8 @@ button:focus {
 .tech-icons:hover {
   transform: scale(1.05) !important;
   overflow: hidden !important;
-  border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
+  border: 2.2px solid var(--medium-brown) !important;
+  background-color: var(--light-beige) !important;
 }
 .tech-icon-images {
   padding: 20px !important;
@@ -583,8 +629,8 @@ button:focus {
 
 .quote-card-view {
   border: none !important;
-  color: white !important;
-  background-color: transparent !important;
+  color: var(--primary-text) !important;
+  background-color: rgba(245, 241, 232, 0.8) !important;
 }
 
 .about-activity {
@@ -607,7 +653,7 @@ button:focus {
   padding-top: 110px !important;
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
-  color: white !important;
+  color: var(--primary-text) !important;
 }
 
 .resume {
@@ -645,14 +691,14 @@ button:focus {
 .resume .resume-item {
   padding: 0 0 10px 25px;
   margin-top: -2px;
-  border-left: 2px solid #8a49a8;
+  border-left: 2px solid #a67c52;
   position: relative;
 }
 
 .resume .resume-item .resume-title {
   line-height: 18px;
   font-size: 0.9em;
-  background: #5234795d;
+  background: #8b6f475d;
   padding: 8px 15px;
   display: inline-block;
   font-weight: 600;
@@ -682,7 +728,7 @@ button:focus {
   left: -9px;
   top: 0;
   background: #fff;
-  border: 2px solid #8a49a8;
+  border: 2px solid #a67c52;
 }
 
 .like-item {
@@ -692,8 +738,8 @@ button:focus {
 }
 
 .like-btn {
-  background-color: #934cce5e !important;
-  border-color: #934cce5e !important;
+  background-color: #8b6f475e !important;
+  border-color: #8b6f475e !important;
   padding: 0.25rem 0.98rem !important;
   border-radius: 5px !important;
   line-height: 1.4 !important;
@@ -702,8 +748,8 @@ button:focus {
 
 .like-btn:hover {
   transform: translateY(-2px) !important;
-  background-color: #a24dd386 !important;
-  border-color: #a24dd386 !important;
+  background-color: #a67c5286 !important;
+  border-color: #a67c5286 !important;
 }
 
 .animate-like {
@@ -727,7 +773,7 @@ button:focus {
 
 .fork-btn-inner {
   line-height: 1.4em !important;
-  background-color: #934cce5e !important;
+  background-color: #8b6f475e !important;
   padding: 0.25rem 1.1rem !important;
   vertical-align: middle !important;
   text-align: center !important;
@@ -735,9 +781,481 @@ button:focus {
 
 .fork-btn-inner:hover {
   transform: translateY(-2px) !important;
-  background-color: #a24dd386 !important;
-  border-color: #a24dd386 !important;
+  background-color: #a67c5286 !important;
+  border-color: #a67c5286 !important;
+}
+
+/* --------- Contact Page Styles --------- */
+.contact-section {
+  position: relative !important;
+  padding-top: 150px !important;
+  padding-bottom: 30px !important;
+  background-image: var(--section-background-color) !important;
+  color: var(--primary-text) !important;
+  z-index: 1 !important;
+}
+
+.contact-content {
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+}
+
+.contact-title {
+  font-size: 2em !important;
+  margin-bottom: 30px !important;
+  text-align: center !important;
+}
+
+.contact-info {
+  padding: 20px !important;
+}
+
+.contact-item {
+  display: flex !important;
+  align-items: center !important;
+  margin-bottom: 25px !important;
+  padding: 15px !important;
+  background-color: rgba(139, 115, 85, 0.1) !important;
+  border-radius: 10px !important;
+  transition: 0.3s ease !important;
+  border: 1px solid var(--warm-beige) !important;
+}
+
+.contact-item:hover {
+  background-color: rgba(139, 115, 85, 0.15) !important;
+  transform: translateY(-2px) !important;
+}
+
+.contact-icon {
+  font-size: 2em !important;
+  color: var(--medium-brown) !important;
+  margin-right: 20px !important;
+  min-width: 50px !important;
+}
+
+.contact-item h5 {
+  color: var(--medium-brown) !important;
+  margin-bottom: 5px !important;
+  font-weight: 600 !important;
+}
+
+.contact-item p {
+  margin: 0 !important;
+  color: var(--secondary-text) !important;
+}
+
+.contact-form {
+  padding: 20px !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+.contact-form .form-label {
+  color: var(--medium-brown) !important;
+  font-weight: 500 !important;
+  margin-bottom: 8px !important;
+}
+
+.contact-form .form-control {
+  background-color: rgba(245, 241, 232, 0.8) !important;
+  border: 1px solid var(--light-brown) !important;
+  color: var(--primary-text) !important;
+  border-radius: 8px !important;
+  padding: 12px 15px !important;
+  transition: 0.3s ease !important;
+  pointer-events: auto !important;
+  user-select: text !important;
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  position: relative !important;
+  z-index: 100 !important;
+}
+
+.contact-form .form-control:focus {
+  background-color: var(--light-beige) !important;
+  border-color: var(--medium-brown) !important;
+  box-shadow: 0 0 0 0.2rem rgba(139, 115, 85, 0.25) !important;
+  color: var(--primary-text) !important;
+}
+
+.contact-form .form-control::placeholder {
+  color: rgba(44, 36, 25, 0.6) !important;
+}
+
+.contact-submit-btn {
+  background-color: var(--medium-brown) !important;
+  border-color: var(--medium-brown) !important;
+  color: var(--light-text) !important;
+  font-weight: 600 !important;
+  padding: 12px 30px !important;
+  border-radius: 8px !important;
+  transition: 0.3s ease !important;
+  width: 100% !important;
+  margin-top: 20px !important;
+}
+
+.contact-submit-btn:hover {
+  background-color: var(--dark-brown) !important;
+  border-color: var(--dark-brown) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 5px 15px rgba(139, 115, 85, 0.3) !important;
+}
+
+.contact-submit-btn:active {
+  transform: translateY(0) !important;
+}
+
+/* Responsive styles for contact page */
+@media (max-width: 767px) {
+  .contact-section {
+    padding-top: 120px !important;
+  }
+  
+  .contact-title {
+    font-size: 1.5em !important;
+  }
+  
+  .contact-item {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+  
+  .contact-icon {
+    margin-right: 0 !important;
+    margin-bottom: 10px !important;
+  }
+  
+  .contact-content {
+    padding-top: 30px !important;
+  }
 }
 .fork-btn-inner::after {
   display: none !important;
+}
+
+/* --------- */
+/* Enhanced About Page Styles */
+/* --------- */
+
+/* About activity list styling */
+.about-activity {
+  display: flex !important;
+  align-items: center !important;
+  margin-bottom: 12px !important;
+  color: var(--secondary-text) !important;
+  font-size: 1.05em !important;
+  line-height: 1.4 !important;
+}
+
+.about-activity svg {
+  color: var(--medium-brown) !important;
+  margin-right: 10px !important;
+  font-size: 0.9em !important;
+}
+
+/* Experience cards hover effects */
+.experience-card {
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 6px rgba(139, 115, 85, 0.1) !important;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 8px 15px rgba(139, 115, 85, 0.2) !important;
+}
+
+/* Enhanced quote card styling */
+.quote-card-view {
+  border-radius: 15px !important;
+  box-shadow: 0 6px 12px rgba(139, 115, 85, 0.15) !important;
+  transition: all 0.3s ease !important;
+}
+
+.quote-card-view:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 10px 20px rgba(139, 115, 85, 0.2) !important;
+}
+
+/* Skill items styling */
+.skill-item:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 8px 15px rgba(139, 115, 85, 0.2) !important;
+  background-color: var(--light-beige) !important;
+}
+
+/* Tech icons enhanced styling */
+.tech-icons {
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+}
+
+.tech-icons:hover {
+  transform: translateY(-5px) scale(1.05) !important;
+  box-shadow: 0 8px 15px rgba(139, 115, 85, 0.25) !important;
+}
+
+/* Section spacing improvements */
+.about-section .project-heading {
+  font-weight: 600 !important;
+  letter-spacing: 0.5px !important;
+}
+
+/* Responsive improvements for About page */
+@media (max-width: 767px) {
+  .about-section {
+    padding-top: 120px !important;
+  }
+
+  .about-section .project-heading {
+    font-size: 1.8em !important;
+  }
+
+  .experience-card {
+    margin-bottom: 20px !important;
+  }
+
+  .tech-icons {
+    margin: 8px !important;
+    font-size: 3.5em !important;
+  }
+}
+
+/* --------- */
+/* Services Page Styles */
+/* --------- */
+.services-section {
+  position: relative !important;
+  padding-top: 150px !important;
+  padding-bottom: 30px !important;
+  background-image: var(--section-background-color) !important;
+  color: var(--primary-text) !important;
+}
+
+/* Fix pour les particules qui bloquent les interactions */
+#tsparticles {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: -1 !important;
+  pointer-events: none !important;
+}
+
+.service-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 12px 25px rgba(139, 115, 85, 0.25) !important;
+  background-color: var(--light-beige) !important;
+}
+
+.cta-button:hover {
+  background-color: var(--dark-brown) !important;
+  border-color: var(--dark-brown) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 5px 15px rgba(139, 115, 85, 0.3) !important;
+  color: white !important;
+}
+
+/* --------- */
+/* Realizations Page Styles */
+/* --------- */
+.realizations-section {
+  position: relative !important;
+  padding-top: 150px !important;
+  padding-bottom: 30px !important;
+  background-image: var(--section-background-color) !important;
+  color: var(--primary-text) !important;
+}
+
+.realization-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 12px 25px rgba(139, 115, 85, 0.25) !important;
+  background-color: var(--light-beige) !important;
+}
+
+.filter-btn:hover {
+  background-color: var(--medium-brown) !important;
+  color: white !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Fix pour tous les badges Bootstrap */
+.badge {
+  background-color: var(--medium-brown) !important;
+  color: white !important;
+}
+
+.badge-primary {
+  background-color: var(--medium-brown) !important;
+  color: white !important;
+}
+
+.badge-secondary {
+  background-color: var(--dark-brown) !important;
+  color: white !important;
+}
+
+.badge-info {
+  background-color: var(--light-brown) !important;
+  color: white !important;
+}
+
+.badge-success {
+  background-color: var(--medium-brown) !important;
+  color: white !important;
+}
+
+.badge-warning {
+  background-color: var(--light-brown) !important;
+  color: white !important;
+}
+
+.badge-danger {
+  background-color: var(--dark-brown) !important;
+  color: white !important;
+}
+
+/* Force tous les badges peu importe leur classe */
+.badge,
+[class*="badge"] {
+  background-color: var(--medium-brown) !important;
+  color: white !important;
+}
+
+/* Spécifique pour les badges de catégorie */
+.custom-badge {
+  background-color: var(--medium-brown) !important;
+  color: white !important;
+  border: none !important;
+}
+
+.custom-badge:hover {
+  background-color: var(--dark-brown) !important;
+  color: white !important;
+}
+
+/* Fix pour les éléments Bootstrap avec couleurs par défaut */
+.btn-primary {
+  background-color: var(--medium-brown) !important;
+  border-color: var(--medium-brown) !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--dark-brown) !important;
+  border-color: var(--dark-brown) !important;
+}
+
+.btn-info {
+  background-color: var(--light-brown) !important;
+  border-color: var(--light-brown) !important;
+}
+
+.btn-secondary {
+  background-color: var(--dark-brown) !important;
+  border-color: var(--dark-brown) !important;
+}
+
+/* Fix pour les indicateurs de carousel */
+.carousel-indicators button {
+  background-color: var(--medium-brown) !important;
+}
+
+.carousel-indicators .active {
+  background-color: var(--dark-brown) !important;
+}
+
+/* --------- */
+/* New Home Page Styles */
+/* --------- */
+
+/* Service preview cards */
+.service-preview-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 12px 25px rgba(139, 115, 85, 0.25) !important;
+  background-color: var(--light-beige) !important;
+}
+
+/* Fix pour les boutons outline */
+.btn-outline-secondary {
+  border-color: var(--medium-brown) !important;
+  color: var(--medium-brown) !important;
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--medium-brown) !important;
+  border-color: var(--medium-brown) !important;
+  color: white !important;
+}
+
+.btn-outline-secondary:focus {
+  background-color: var(--medium-brown) !important;
+  border-color: var(--medium-brown) !important;
+  color: white !important;
+  box-shadow: 0 0 0 0.2rem rgba(139, 115, 85, 0.25) !important;
+}
+
+/* Styles spécifiques pour les boutons hero */
+.hero-btn-primary {
+  pointer-events: auto !important;
+  position: relative !important;
+  z-index: 1001 !important;
+}
+
+.hero-btn-primary:hover {
+  background-color: var(--dark-brown) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 5px 15px rgba(139, 115, 85, 0.3) !important;
+}
+
+.hero-btn-outline {
+  pointer-events: auto !important;
+  position: relative !important;
+  z-index: 1001 !important;
+}
+
+.hero-btn-outline:hover {
+  background-color: var(--medium-brown) !important;
+  border-color: var(--medium-brown) !important;
+  color: white !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 5px 15px rgba(139, 115, 85, 0.3) !important;
+}
+
+/* S'assurer que tous les boutons sont cliquables */
+.btn {
+  pointer-events: auto !important;
+  position: relative !important;
+}
+
+/* Social links hover effects */
+.social-link:hover {
+  background-color: var(--dark-brown) !important;
+  transform: scale(1.1) !important;
+  box-shadow: 0 5px 15px rgba(139, 115, 85, 0.3) !important;
+}
+
+/* Enhanced home section */
+.home-section {
+  min-height: 100vh !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Responsive improvements for new home page */
+@media (max-width: 767px) {
+  .home-header {
+    text-align: center !important;
+    margin-bottom: 30px !important;
+  }
+
+  .service-preview-card {
+    margin-bottom: 20px !important;
+  }
+
+  .social-link {
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 1.2em !important;
+  }
 }

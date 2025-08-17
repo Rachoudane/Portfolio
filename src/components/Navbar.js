@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import logo from "../Assets/logo.png";
+import logo from "../Assets/Logo_2-removebg-preview.png";
 import { Link } from "react-router-dom";
 import {
   AiOutlineHome,
@@ -36,7 +36,7 @@ function NavBar() {
       <Container>
         <Navbar.Brand href="/" className="d-flex align-items-center">
           <img src={logo} className="img-fluid logo" alt="brand" />
-          <span className="brand-name ms-3">Maëlle Barrois Legrand</span>
+          <span className="brand-name ms-3">MBL Designer</span>
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
@@ -59,7 +59,7 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to="/prestations"
+                to="/services"
                 onClick={() => updateExpanded(false)}
               >
                 <MdDesignServices style={{ marginBottom: "2px" }} /> Prestations
@@ -69,7 +69,7 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to="/projects"
+                to="/realizations"
                 onClick={() => updateExpanded(false)}
               >
                 <AiOutlineFundProjectionScreen
