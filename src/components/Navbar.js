@@ -4,13 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import logo from "../Assets/Logo_2-removebg-preview.png";
 import { Link } from "react-router-dom";
-import {
-  AiOutlineHome,
-  AiOutlineFundProjectionScreen,
-  AiOutlineUser,
-  AiOutlineMail,
-} from "react-icons/ai";
-import { MdDesignServices } from "react-icons/md";
+
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -52,7 +46,7 @@ function NavBar() {
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
               <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                <AiOutlineHome style={{ marginBottom: "2px" }} /> Accueil
+                Accueil
               </Nav.Link>
             </Nav.Item>
 
@@ -62,7 +56,7 @@ function NavBar() {
                 to="/services"
                 onClick={() => updateExpanded(false)}
               >
-                <MdDesignServices style={{ marginBottom: "2px" }} /> Prestations
+                Prestations
               </Nav.Link>
             </Nav.Item>
 
@@ -72,9 +66,6 @@ function NavBar() {
                 to="/realizations"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineFundProjectionScreen
-                  style={{ marginBottom: "2px" }}
-                />{" "}
                 Mes Réalisations
               </Nav.Link>
             </Nav.Item>
@@ -85,7 +76,7 @@ function NavBar() {
                 to="/about"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> À Propos
+                À Propos
               </Nav.Link>
             </Nav.Item>
 
@@ -95,7 +86,7 @@ function NavBar() {
                 to="/contact"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineMail style={{ marginBottom: "2px" }} /> Contact
+                Contact
               </Nav.Link>
             </Nav.Item>
           </Nav>

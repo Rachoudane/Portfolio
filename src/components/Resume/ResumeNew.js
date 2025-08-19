@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
 import { AiOutlineEye } from "react-icons/ai";
 import { FaFileAlt, FaEnvelope, FaLinkedinIn } from "react-icons/fa";
+import HexagonGroup from "../HexagonGroup";
 
 function ResumeNew() {
 
@@ -29,6 +30,8 @@ function ResumeNew() {
               }}>
                 Découvrez mon parcours professionnel et mes compétences en architecture d'intérieur
               </p>
+              {/* Hexagones décoratifs après le titre */}
+              <HexagonGroup position="center" />
             </Col>
           </Row>
 
@@ -95,6 +98,9 @@ function ResumeNew() {
               </div>
             </Col>
           </Row>
+
+          {/* Hexagones décoratifs entre les sections */}
+          <HexagonGroup position="right" />
 
           {/* Contact Info Section */}
           <Row style={{ justifyContent: "center" }}>

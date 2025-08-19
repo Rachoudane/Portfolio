@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import Particle from "../Particle";
+import HexagonGroup from "../HexagonGroup";
 import { 
   FaHome, 
   FaBuilding, 
@@ -25,8 +26,7 @@ function ServiceCard({ icon, title, description, features, price }) {
         backgroundColor: "rgba(245, 241, 232, 0.95)",
         border: "1px solid var(--warm-beige)",
         borderRadius: "20px",
-        transition: "all 0.3s ease",
-        cursor: "pointer"
+        transition: "all 0.3s ease"
       }}
       className="service-card"
       >
@@ -110,22 +110,22 @@ function Services() {
       description: "Transformation complète ou partielle de votre intérieur pour créer un espace de vie qui vous ressemble.",
       features: [
         "Étude des besoins et contraintes",
+        "Conseils personalisés",
         "Plans 2D et visualisations 3D",
         "Sélection mobilier et matériaux",
-        "Coordination des artisans",
         "Suivi de chantier"
       ],
-      price: "À partir de 80€/m²"
+      price: "À partir de 80€"
     },
     {
       icon: <FaBuilding />,
       title: "Espaces Commerciaux",
       description: "Conception d'espaces professionnels optimisés pour votre activité et l'expérience client.",
       features: [
-        "Analyse de l'activité",
+        "Étude des besoins et contraintes",
         "Optimisation des flux",
+        "Plans 2D et visualisations 3D",
         "Identité visuelle spatiale",
-        "Éclairage professionnel",
         "Respect des normes"
       ],
       price: "Sur devis personnalisé"
@@ -135,52 +135,39 @@ function Services() {
       title: "Scénographie",
       description: "Création d'univers immersifs pour théâtres, expositions et événements culturels.",
       features: [
+        "Étude des besoins et contraintes",
         "Conception artistique",
         "Décors sur mesure",
         "Éclairage scénique",
-        "Gestion technique",
-        "Installation complète"
+        "Plans 2D et visualisations 3D"
       ],
-      price: "À partir de 1500€"
+      price: "Sur devis personnalisé"
     },
     {
       icon: <FaCalendarAlt />,
       title: "Événementiel",
       description: "Aménagement temporaire pour vos événements privés ou professionnels.",
       features: [
+        "Étude des besoins et contraintes",
         "Thématisation sur mesure",
         "Décoration éphémère",
         "Mobilier événementiel",
-        "Coordination logistique",
         "Montage/démontage"
       ],
-      price: "À partir de 800€"
+      price: "Sur devis personnalisé"
     },
     {
       icon: <FaPalette />,
       title: "Conseil en Décoration",
       description: "Accompagnement personnalisé pour harmoniser votre décoration existante.",
       features: [
-        "Audit déco existant",
+        "Étude des besoins et contraintes",
         "Conseils couleurs et matières",
         "Shopping list personnalisée",
         "Mise en scène des espaces",
         "Suivi à distance possible"
       ],
-      price: "150€ la demi-journée"
-    },
-    {
-      icon: <MdArchitecture />,
-      title: "Rénovation & Extension",
-      description: "Accompagnement dans vos projets de rénovation lourde et d'extension.",
-      features: [
-        "Étude de faisabilité",
-        "Plans architecturaux",
-        "Dossier permis de construire",
-        "Coordination maîtrise d'œuvre",
-        "Suivi réglementaire"
-      ],
-      price: "Sur devis détaillé"
+      price: "À partir de 50€"
     }
   ];
 
@@ -208,6 +195,8 @@ function Services() {
               De la conception à la réalisation, je vous accompagne dans tous vos projets d'aménagement 
               et de décoration. Chaque prestation est adaptée à vos besoins et votre budget.
             </p>
+            {/* Hexagones décoratifs après le titre */}
+            <HexagonGroup position="center" />
           </Col>
         </Row>
 
@@ -224,6 +213,9 @@ function Services() {
             />
           ))}
         </Row>
+
+        {/* Hexagones décoratifs avant la section CTA */}
+        <HexagonGroup position="scattered" />
 
         {/* Call to Action */}
         <Row style={{ justifyContent: "center", paddingTop: "50px" }}>
@@ -245,7 +237,7 @@ function Services() {
                 color: "var(--dark-brown)", 
                 marginBottom: "15px" 
               }}>
-                Un projet en tête ?
+                Créons ensemble l'espace de vos rêves !
               </h3>
               <p style={{ 
                 color: "var(--secondary-text)", 

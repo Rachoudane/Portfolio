@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import profileImg from "../../Assets/IMG_6026.jpg";
 import Particle from "../Particle";
 import Type from "./Type";
+import HexagonGroup from "../HexagonGroup";
 import {
   FaHome,
   FaBuilding,
@@ -419,19 +420,18 @@ function Home() {
           <Row style={{ alignItems: "center", minHeight: "100vh", paddingTop: "100px" }}>
             <Col md={6}>
             
-              <h1 style={{ fontSize: "3.5em", marginBottom: "30px", color: "var(--primary-text)" }}>
-                Créons ensemble votre{" "}
-                <strong className="purple">espace de rêve</strong>
+              <h1 style={{ fontSize: "3em", marginBottom: "30px", color: "var(--primary-text)" }}>
+                Bienvenue sur mon{" "}
+                <strong className="purple">site !</strong>
               </h1>
 
-              <p style={{ 
-                fontSize: "1.3em", 
-                color: "var(--secondary-text)", 
+              <p style={{
+                fontSize: "1.3em",
+                color: "var(--secondary-text)",
                 lineHeight: "1.7",
                 marginBottom: "40px"
               }}>
-                Architecte d'intérieur passionnée, je donne vie à vos projets avec créativité 
-                et expertise. Chaque espace raconte une histoire unique.
+                Découvrez mon univers, mon savoir-faire et mes projets. Bonne exploration !
               </p>
 
               <div style={{
@@ -481,7 +481,8 @@ function Home() {
                   color: "white",
                   padding: "15px 20px",
                   borderRadius: "15px",
-                  backdropFilter: "blur(10px)"
+                  backdropFilter: "blur(10px)",
+                  display: "none"
                 }}>
                   <FaPalette style={{ marginRight: "10px" }} />
                   <strong>MBL Designer</strong>
@@ -491,17 +492,20 @@ function Home() {
           </Row>
         </Container>
       </Container>
-
+      
       {/* Portfolio Highlights Carousel */}
       <Container fluid style={{ backgroundColor: "rgba(245, 241, 232, 0.3)", padding: "80px 0" }}>
         <Container>
+          {/* Hexagones décoratifs avant la section projets */}
+          <HexagonGroup position="right" />
+          
           <Row>
             <Col md={12} style={{ textAlign: "center", marginBottom: "50px" }}>
               <h2 style={{ fontSize: "2.8em", color: "var(--primary-text)", marginBottom: "20px" }}>
-                Mes <strong className="purple">Réalisations Phares</strong>
+                Mes <strong className="purple">projets les plus récents</strong>
               </h2>
               <p style={{ fontSize: "1.2em", color: "var(--secondary-text)", maxWidth: "600px", margin: "0 auto" }}>
-                Découvrez quelques-uns de mes projets les plus marquants
+                Découvrez mes dernières créations et réalisations
               </p>
             </Col>
           </Row>
@@ -558,6 +562,9 @@ function Home() {
             ))}
           </Carousel>
           
+          {/* Hexagones décoratifs après le carousel */}
+          <HexagonGroup position="scattered" />
+          
           <Row style={{ marginTop: "40px" }}>
             <Col md={12} style={{ textAlign: "center" }}>
               <button
@@ -601,6 +608,8 @@ function Home() {
               <p style={{ fontSize: "1.2em", color: "var(--secondary-text)", maxWidth: "700px", margin: "0 auto" }}>
                 De l'aménagement résidentiel à la scénographie, je vous accompagne dans tous vos projets
               </p>
+              {/* Hexagones décoratifs dans la section services */}
+              <HexagonGroup position="center" />
             </Col>
           </Row>
           <Row>
@@ -687,10 +696,13 @@ function Home() {
           </Row>
         </Container>
       </Container>
-
+      
       {/* Testimonials Section */}
       <Container fluid style={{ backgroundColor: "rgba(139, 115, 85, 0.05)", padding: "80px 0" }}>
         <Container>
+          {/* Hexagones décoratifs avant les témoignages */}
+          <HexagonGroup position="left" />
+          
           <Row>
             <Col md={12} style={{ textAlign: "center", marginBottom: "50px" }}>
               <h2 style={{ fontSize: "2.8em", color: "var(--primary-text)", marginBottom: "20px" }}>

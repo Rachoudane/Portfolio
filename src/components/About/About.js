@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
+import HexagonGroup from "../HexagonGroup";
 
 import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
@@ -36,6 +37,9 @@ function About() {
           </Col>
         </Row>
 
+        {/* Hexagones décoratifs entre les sections */}
+        <HexagonGroup position="right" />
+
         {/* Professional Skills Section */}
         <Row style={{ justifyContent: "center", paddingTop: "50px" }}>
           <Col md={12}>
@@ -46,6 +50,9 @@ function About() {
           </Col>
         </Row>
 
+        {/* Hexagones décoratifs entre les sections */}
+        <HexagonGroup position="left" />
+
         {/* Tools & Equipment Section */}
         <Row style={{ justifyContent: "center", paddingTop: "70px" }}>
           <Col md={12}>
@@ -55,6 +62,9 @@ function About() {
             <Toolstack />
           </Col>
         </Row>
+        
+        {/* Hexagones décoratifs à la fin de la page */}
+        <HexagonGroup position="scattered" />
       </Container>
     </Container>
   );

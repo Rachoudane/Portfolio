@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Card, Button, Badge, Carousel, Modal } from "react-bootstrap";
 import Particle from "../Particle";
+import HexagonGroup from "../HexagonGroup";
 import {
   FaHome,
   FaBuilding,
@@ -589,6 +590,8 @@ function Realizations() {
               Découvrez une sélection de mes projets récents, de l'aménagement résidentiel 
               à la scénographie, en passant par les espaces commerciaux.
             </p>
+            {/* Hexagones décoratifs après le titre */}
+            <HexagonGroup position="center" />
           </Col>
         </Row>
 
@@ -617,6 +620,9 @@ function Realizations() {
           </Col>
         </Row>
 
+        {/* Hexagones décoratifs avant la grille de projets */}
+        <HexagonGroup position="right" />
+
         {/* Projects Grid */}
         <Row style={{ justifyContent: "center" }}>
           {filteredProjects.map((project) => (
@@ -627,6 +633,9 @@ function Realizations() {
             />
           ))}
         </Row>
+
+        {/* Hexagones décoratifs avant les statistiques */}
+        <HexagonGroup position="scattered" />
 
         {/* Stats Section */}
         <Row style={{ justifyContent: "center", paddingTop: "50px" }}>

@@ -4,6 +4,7 @@ import Particle from "../Particle";
 import { AiOutlineMail, AiOutlineEnvironment } from "react-icons/ai";
 import emailjs from '@emailjs/browser';
 import { emailjsConfig } from '../../config/emailjs';
+import HexagonGroup from "../HexagonGroup";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -117,6 +118,8 @@ function Contact() {
               N'hésitez pas à me contacter pour discuter de vos projets, 
               collaborations ou simplement pour échanger sur le design et la créativité.
             </p>
+            {/* Hexagones décoratifs après le titre */}
+            <HexagonGroup position="center" />
           </Col>
         </Row>
 
@@ -141,6 +144,9 @@ function Contact() {
                 <p>France - Travail à distance possible</p>
               </div>
             </div>
+            
+            {/* Hexagones décoratifs dans la section contact */}
+            <HexagonGroup position="left" />
           </Col>
 
           <Col md={6} className="contact-form">
